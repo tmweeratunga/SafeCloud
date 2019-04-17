@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <style>
+	body {
+   width:700px;
+   height:200px;
+}
+  </style>
+  
+</head>
+<body> 
+ 
+<div class="col-sm-12">
+  <div class="panel panel-default col-sm-6">
+    <div class="panel-body">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="form-group">
+					<div class="col-sm-1">
+						<img src="logo.png" class="img-circle" alt="Cinque Terre" width="30" height="30">
+					</div>
+					<div class="col-sm-11">
+						<b>Sotorage level confidentiality</b> & <b>Nonrepudiation</b> for SSL world
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<button type="button" id="manageMyKeys" class="btn btn-primary">Manage My Keys</button>
+				<button type="button" id="encrypt" class="btn btn-primary">Encrypt</button>
+				<button type="button" id="decrypt" class="btn btn-primary">Decrypt</button>
+				<button type="button" id="backup" class="btn btn-primary">Backup</button>
+				<button type="button" id="managerecipient" class="btn btn-primary">Manage Recipients</button>
+			</div>
+		</div>
+		<div id="detailsDiv" class="panel panel-default hide">
+			<div class="panel-body">
+				<div id="manageKeyOptionDiv" class="form-group hide">
+					<button type="button" id="generateKeyPair" class="btn">Generate Key Pair</button>
+					<button type="button" id="updateKey" class="btn">Upload Key Pair</button>
+					<button type="button" id="restoreBackup" class="btn">Restore Backup</button>
+				</div>
+				<div id="updateKeyDiv" class="form-group hide">
+					<div class="form-group">
+						<label for="privetKey">Privet Key</label>
+						<textarea id="privetKey" placeholder="Enter your privet key" class="form-control" rows="4" cols="50">
+						</textarea>
+					</div>
+					<div class="form-group">
+						<label for="publicKey">Public Key</label>
+						<textarea id="publicKey" placeholder="Enter your public key" class="form-control" rows="4" cols="50">
+						</textarea>
+					</div>
+					<div class="form-group">
+						<button type="button" id="saveMyKey" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+				<div id="backupRestoreDiv" class="form-group hide">
+					<div class="form-group">
+						<label for="uploadFile" id="restore">Backup File</label>
+						<input id="uploadFile" type="file" class="form-control">
+						<button type="button" id="restoreFile" class="btn btn-primary">Restore</button>
+					</div>
+				</div>
+				<div id="backupOptionDiv" class="form-group hide">
+					<button type="button" id="backupAllData" class="btn">Backup All Data</button>
+					<button type="button" id="backupAllKeys" class="btn">Backup My Keys</button>
+				</div>
+				<div class="form-group">
+					<div id="menageRecipientDiv" class="form-group hide">
+						<button type="button" id="addNewRecipient" class="btn">Add New Recipient</button>
+						<button type="button" id="updateRecipient" class="btn">Update Recipient</button>
+						<button type="button" id="deleteRecipient" class="btn">Delete Recipient</button>
+					</div>
+					<div id="recipientDetailsDiv" class="form-group hide">
+						<div id="recipientEmailDiv" class="form-group">
+							<label for="recipientEmail">Recipient Email</label>
+							<input type="email" class="form-control" id="recipientEmail" placeholder="Enter email" name="email">
+						</div>
+						<div id="recipientListDiv" class="form-group hide">
+								<label for="recipientList">Recipient Email</label>
+							<select id="recipientList" class="form-control-sm form-control"></select>
+						</div>
+						<div class="form-group">
+							<label for="privetKey">Recipient Public Key</label>
+							<textarea id="recipientPublicKey" placeholder="Enter your privet key" class="form-control" rows="4" cols="50">
+							</textarea>
+						</div>
+						<div id="saveRecipientDiv" class="form-group hide">
+							<button type="button" id="saveRecipient" class="btn btn-primary">Save</button>
+						</div>
+						<div id="updateRecipientDiv" class="form-group hide">
+							<button type="button" id="recipientUpdate" class="btn btn-primary">Update</button>
+						</div>
+						<div class="form-group hide">
+							<button type="button" id="deleteRecipient" class="btn btn-primary">delete</button>
+						</div>
+					</div>
+				</div>
+				<div id="recipientListForEncryptDiv" class="form-group hide">
+					<div class="form-group">
+						<select id="recipientListForEncrype" class="form-control-sm form-control"></select>
+					</div>
+					<div class="form-group">
+						<button type="button" id="encryiptForRecipient" class="btn btn-primary">Encrypt</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jsencrypt.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "Safe Cloud",
+  "description": "Storage level confidentiality, non-repudation for SSL world",
+  "version": "0.1.0",
+  "permissions": [
+    "background","downloads",
+    "activeTab",
+	"storage"
+  ],
+  "browser_action": {
+      "default_title": "Set this page's color.",
+      "default_icon": "logo.png",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "css": ["style.css"],
+      "js": ["jquery.js","script.js","jsencrypt.js"]
+    }
+  ],
+  "manifest_version": 2,
+  "icons":{
+  	"16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  }
+}
